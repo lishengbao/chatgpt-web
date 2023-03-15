@@ -23,7 +23,7 @@ spec:
       #           values: ["true"]
       containers:
       - name: chatgpt-web
-        image: guoqiangqi/chatgpt-web:v1.1
+        image: guoqiangqi/chatgpt-web:v1.2
         imagePullPolicy: Always
         ports:
         - containerPort: 3002
