@@ -10,4 +10,4 @@ spec:
   ports:
     - port: 3002
       targetPort: 3002
-      name: http_port
+      name: http-port
