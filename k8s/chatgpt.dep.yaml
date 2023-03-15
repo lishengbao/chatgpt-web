@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chatgpt-web
+  namespace: chatgpt
+spec:
+  selector:
+    matchLabels:
+      app: chatgpt-web
+  replicas: 2 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: chatgpt-web
+    spec:
+      # affinity:
+      #   nodeAffinity:
+      #     requiredDuringSchedulingIgnoredDuringExecution:
+      #       nodeSelectorTerms:
+      #       - matchExpressions:
+      #         - key: workingnode
+      #           operator: In
+      #           values: ["true"]
+      containers:
+      - name: chatgpt-web
+        image: guoqiangqi/chatgpt-web:v1.1
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3002
+        env:
+        - name: OPENAI_API_KEY
+          value: "YOU SERCRET KEY"
