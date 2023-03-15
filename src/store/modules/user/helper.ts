@@ -16,8 +16,8 @@ export function defaultSetting(): UserState {
   return {
     userInfo: {
       avatar: 'https://raw.githubusercontent.com/guoqiangqi/chatgpt-web/main/src/assets/avatar.jpg',
-      name: 'ChenZhaoYu',
-      description: 'Star on <a href="https://github.com/guoqiangqi/chatgpt-web" class="text-blue-500" target="_blank" >Github</a>',
+      name: 'Guoqiangqi',
+      description: 'Fork me on <a href="https://github.com/guoqiangqi" class="text-blue-500" target="_blank" >Github</a>',
     },
   }
 }
